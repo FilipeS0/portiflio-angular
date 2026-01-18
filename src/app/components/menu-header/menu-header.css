@@ -1,0 +1,36 @@
+.menu_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 1.5rem auto;
+}
+
+.menu_logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.menu_logo-highlight {
+  color: #023aa7;
+}
+
+.menu_nav {
+  display: flex;
+  list-style: none;
+}
+
+.menu_nav-item {
+  font-weight: 600;
+  margin-right: 1.7rem;
+}
+
+.menu_nav-item > a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu_nav-item > a:hover {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.425);
+  color: rgba(255, 255, 255, 0.425);
+}
