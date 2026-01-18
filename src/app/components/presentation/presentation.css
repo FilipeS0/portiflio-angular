@@ -1,0 +1,93 @@
+.presentation_container {
+  margin-top: 3rem;
+  display: flex;
+  flex-flow: column;
+}
+
+.presentation_left-section > h1 {
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.buttons > a {
+  text-decoration: none;
+}
+
+.buttons > a > button {
+  padding: 0.75rem 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  cursor: pointer;
+}
+
+.buttons > a > button:hover {
+  border: 1px solid transparent;
+}
+
+.presentation_container > .presentation_left-section > .buttons > a > .github {
+  background-color: white;
+  color: black;
+}
+
+.linkedin {
+  background-color: #1254fe;
+}
+
+.linkedin > span {
+  background-image: url(../../../../public/assets/img/linkedin.svg);
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  margin-right: 0.1rem;
+}
+
+.github > span {
+  background-image: url(../../../../public/assets/img/github.svg);
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  margin-right: 0.1rem;
+}
+
+.presentation_right-section {
+  margin-top: 2rem;
+}
+
+.presentation_right-section img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+@media screen and (min-width: 1150px) {
+  .presentation_container {
+    flex-flow: row;
+    justify-content: space-between;
+  }
+
+  .presentation_container > .presentation_left-section,
+  .presentation_container > .presentation_left-section {
+    width: 45%;
+  }
+
+  .presentation_left-section > h1 {
+    font-size: 3.5rem;
+    margin-top: 1.5rem;
+    text-align: inherit;
+  }
+
+  .buttons {
+    justify-content: initial;
+  }
+}

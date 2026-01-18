@@ -1,10 +1,19 @@
 <div class="menu_container">
   <p class="menu_logo">&lt; Filipe <span class="menu_logo-highlight">Souto</span> /&gt;</p>
 
-  <ul class="menu_nav">
-    <li class="menu_nav-item"><a href="#">Home</a></li>
-    <li class="menu_nav-item"><a href="#">About</a></li>
-    <li class="menu_nav-item"><a href="#">Skills</a></li>
-    <li class="menu_nav-item"><a href="#">Projects</a></li>
-  </ul>
+  <nav class="menu_nav">
+    <button (click)="toggleMenu()">
+      <span class="burger-icon"></span>
+    </button>
+
+    <ul class="menu-list" [class.open]="isMenuOpen">
+      <button class="mobile-only" (click)="toggleMenu()">
+        <span class="x-icon"></span>
+      </button>
+      <li class="menu_nav-item"><a href="#">Home</a></li>
+      <li class="menu_nav-item"><a href="#about">About</a></li>
+      <li class="menu_nav-item"><a href="#">Skills</a></li>
+      <li class="menu_nav-item"><a href="#">Projects</a></li>
+    </ul>
+  </nav>
 </div>

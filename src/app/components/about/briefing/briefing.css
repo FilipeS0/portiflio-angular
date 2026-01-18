@@ -1,0 +1,23 @@
+.briefing_container {
+  display: flex;
+  flex-flow: column;
+}
+
+.briefing_container > h2 {
+  margin: 1rem 0 0 1.5rem;
+}
+
+.briefing_container > h3 {
+  margin-top: 0.5rem;
+}
+
+.briefing_container > ul {
+  margin-top: 0.25rem;
+  list-style: none;
+}
+
+.briefing_container > ul > li {
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 0.25rem;
+}

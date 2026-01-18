@@ -1,9 +1,12 @@
 .menu_container {
   display: flex;
+  flex-flow: row-reverse;
   justify-content: space-between;
   align-items: center;
 
   margin: 1.5rem auto;
+
+  position: sticky;
 }
 
 .menu_logo {
@@ -15,22 +18,123 @@
   color: #023aa7;
 }
 
-.menu_nav {
+.burger-icon {
+  background-image: url('../../../../public/assets/img/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: inline-block;
+}
+
+.mobile-only {
+  background-color: transparent;
+}
+
+.x-icon {
+  background-image: url('../../../../public/assets/img/close_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  position: absolute;
+  top: 5%;
+  right: 40%;
+
+  cursor: pointer;
+}
+
+.menu-list {
+  font-weight: 600;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -100%;
+  width: 35vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.75);
+  transition: left 0.3s ease-in-out;
   display: flex;
-  list-style: none;
+  flex-direction: column;
+  padding: 1.5rem;
+
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-list.open {
+  left: 0;
+}
+
+.menu_nav > button {
+  background-color: transparent;
+  z-index: 100;
+  border: none;
+  cursor: pointer;
 }
 
 .menu_nav-item {
-  font-weight: 600;
-  margin-right: 1.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu_nav-item > a {
   text-decoration: none;
-  color: white;
+  font-size: 1.5rem;
+  color: #023aa7;
 }
 
 .menu_nav-item > a:hover {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.425);
-  color: rgba(255, 255, 255, 0.425);
+  text-decoration: underline;
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 820px) {
+  .menu_container {
+    flex-flow: row;
+  }
+
+  .menu_nav {
+    display: flex;
+    flex-flow: row;
+  }
+
+  .menu-list {
+    position: inherit;
+
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    background-color: transparent;
+    flex-direction: row;
+    padding: 1.5rem;
+
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .menu_nav-item {
+    margin-left: 1.7rem;
+  }
+
+  .menu_nav-item > a {
+    font-size: 1.1rem;
+    color: white;
+  }
+
+  .menu_nav-item > a:hover {
+    font-size: 1.1rem;
+  }
+
+  .menu_nav > button {
+    display: none;
+  }
+
+  .mobile-only {
+    display: none;
+  }
 }
